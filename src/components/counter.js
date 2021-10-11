@@ -1,15 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const counter = ({ header, count, setCount }) => {
+const Counter = () => {
+  const [count, setCount] = useState(0)
+
   return (
     <div>
-      <h1>
-        {header} {''} {count}
-      </h1>
+      <h1>Count: {count}</h1>
       <button onClick={() => setCount(count + 1)}>Increment</button>
       <button onClick={() => setCount(count - 1)}>Decrement</button>
     </div>
   )
 }
 
-export default counter
+export default Counter
